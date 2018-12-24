@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	protected Vector3 gravidade = Vector3.zero;
 	protected Vector3 move = Vector3.zero;
 	private bool jump = false;
-
+    
 
 	
 	void Start()
@@ -62,4 +63,6 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
+
+    
 }
