@@ -294,18 +294,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlatformDown.cs" />
+    <Compile Include="Assets\Scripts\ajusts\colisao.cs" />
+    <Compile Include="Assets\Scripts\ajusts\final.cs" />
+    <Compile Include="Assets\Scripts\ajusts\StackEnd.cs" />
+    <Compile Include="Assets\Scripts\ajusts\teste.cs" />
+    <Compile Include="Assets\Scripts\ajusts\Traps.cs" />
     <Compile Include="Assets\Scripts\CarregaMenu.cs" />
-    <Compile Include="Assets\Scripts\colisao.cs" />
     <Compile Include="Assets\Scripts\ConfigSom.cs" />
-    <Compile Include="Assets\Scripts\final.cs" />
     <Compile Include="Assets\Scripts\InstanciaPedras.cs" />
     <Compile Include="Assets\Scripts\MenuControle.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RotacionaPedra.cs" />
-    <Compile Include="Assets\Scripts\teste.cs" />
+    <Compile Include="Assets\Scripts\StalactitesBegin.cs" />
+    <Compile Include="Assets\Scripts\StalactitesEnd.cs" />
+    <Compile Include="Assets\Scripts\Thorns.cs" />
     <Compile Include="Assets\Scripts\TocaSom.cs" />
-    <Compile Include="Assets\Scripts\Traps.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

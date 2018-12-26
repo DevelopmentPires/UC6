@@ -17,8 +17,12 @@ public class teste : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("Foi AQUI?");
+        if(collision.transform.tag != "Scenario")
+        { 
         Destroy(gameObject);
-        Traps.AtivouStack();
+        Traps.AtivouStackBegin();
+        }
 
     }
 }

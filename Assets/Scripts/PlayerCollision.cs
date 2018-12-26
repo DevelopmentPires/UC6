@@ -17,19 +17,27 @@ public class PlayerCollision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-
-        Debug.Log(other.transform.tag);
-        if (other.transform.tag == "Traps")
+        if (collision.transform.tag == "Stalack" || collision.transform.tag == "Walls" || collision.transform.tag == "Lava")
         {
-            Debug.Log("chicorita");
+            Morreu();
         }
 
+    }
 
+    //private void OnTriggerEnter(Collider other)
+    //{
+
+    //    if (other.transform.tag == "Traps" || other.transform.tag == "Walls")
+    //    {
+    //        Morreu();
+    //    }
+
+
+    //}
+
+    void Morreu()
+    {
+        Debug.Log("Morreu!!!");
     }
 
 
