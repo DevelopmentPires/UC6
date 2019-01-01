@@ -36,7 +36,7 @@ public class PlatformDown : MonoBehaviour {
             transform.Translate(-0.01f,0,0);
         }
 
-        if(true) //Fazer aqui, se a plataforma se distanciar muito da lava, destroi, para não ficar voando no espaço)
+        if (true) { } //Fazer aqui, se a plataforma se distanciar muito da lava, destroi, para não ficar voando no espaço)
     }
 
     private void OnCollisionEnter(Collision collision)

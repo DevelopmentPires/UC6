@@ -64,5 +64,20 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+
+    }
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.transform.tag == "Platforms")
+    //    {
+    //       gameObject.transform.parent = null;
+    //    }
+
+    //}
+
+
 }

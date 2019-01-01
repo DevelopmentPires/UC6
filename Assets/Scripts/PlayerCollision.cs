@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour {
 
-	// Use this for initialization
+    GameObject alien;
+
+  // Use this for initialization
 	void Start () {
-		
-	}
+
+        alien = GameObject.Find("Alien");
+        
+        	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,6 +26,23 @@ public class PlayerCollision : MonoBehaviour {
             Morreu();
         }
 
+        if (collision.transform.tag == "Platforms")
+        {
+            Debug.Log("Arvore");
+            alien.transform.parent = collision.transform;
+        }
+
+        
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Key")
+        {
+            Destroy(other.gameObject);
+
+        }
     }
 
     //private void OnTriggerEnter(Collider other)
@@ -40,5 +61,13 @@ public class PlayerCollision : MonoBehaviour {
         Debug.Log("Morreu!!!");
     }
 
+  
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag == "Platforms")
+        {
+            alien.transform.parent = null;
+        }
 
+    }
 }
