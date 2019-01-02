@@ -21,7 +21,7 @@ public class teste : MonoBehaviour {
         if(collision.transform.tag != "Scenario")
         { 
         Destroy(gameObject);
-        Traps.AtivouStackBegin();
+//        Traps.AtivouStackBegin();
         }
 
     }

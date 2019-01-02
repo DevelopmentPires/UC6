@@ -294,20 +294,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\animationKeys.cs" />
-    <Compile Include="Assets\Cam.cs" />
-    <Compile Include="Assets\KeyController.cs" />
-    <Compile Include="Assets\MovePortao.cs" />
-    <Compile Include="Assets\PlatformDown.cs" />
+    <Compile Include="Assets\AudioController.cs" />
     <Compile Include="Assets\Scripts\ajusts\colisao.cs" />
     <Compile Include="Assets\Scripts\ajusts\final.cs" />
-    <Compile Include="Assets\Scripts\ajusts\StackEnd.cs" />
     <Compile Include="Assets\Scripts\ajusts\teste.cs" />
-    <Compile Include="Assets\Scripts\ajusts\Traps.cs" />
+    <Compile Include="Assets\Scripts\animationKeys.cs" />
     <Compile Include="Assets\Scripts\CarregaMenu.cs" />
     <Compile Include="Assets\Scripts\ConfigSom.cs" />
     <Compile Include="Assets\Scripts\InstanciaPedras.cs" />
+    <Compile Include="Assets\Scripts\KeyController.cs" />
     <Compile Include="Assets\Scripts\MenuControle.cs" />
+    <Compile Include="Assets\Scripts\MovePortao.cs" />
+    <Compile Include="Assets\Scripts\PlatformDown.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RotacionaPedra.cs" />
