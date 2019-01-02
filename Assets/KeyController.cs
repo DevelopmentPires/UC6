@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ public class KeyController : MonoBehaviour {
     public GameObject KeyBlue;
     public GameObject imgKeyGreen;
     public GameObject imgKeyBlue;
+   
+
     private bool exit = false;
     
     // Use this for initialization
@@ -32,10 +35,6 @@ public class KeyController : MonoBehaviour {
             imgKeyBlue.active = true;
         }
 
-        if (KeyBlue == null && KeyGreen == null)
-            exit = true;
-
-
-
     }
+
 }
