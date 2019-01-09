@@ -294,11 +294,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AudioController.cs" />
+    <Compile Include="Assets\animaGem.cs" />
     <Compile Include="Assets\Scripts\ajusts\colisao.cs" />
     <Compile Include="Assets\Scripts\ajusts\final.cs" />
     <Compile Include="Assets\Scripts\ajusts\teste.cs" />
     <Compile Include="Assets\Scripts\animationKeys.cs" />
+    <Compile Include="Assets\Scripts\AudioController.cs" />
     <Compile Include="Assets\Scripts\CarregaMenu.cs" />
     <Compile Include="Assets\Scripts\ConfigSom.cs" />
     <Compile Include="Assets\Scripts\InstanciaPedras.cs" />

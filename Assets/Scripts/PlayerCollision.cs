@@ -10,7 +10,11 @@ public class PlayerCollision : MonoBehaviour {
     private GameObject alien;
 
     public Text dies;
+    public Text gens;
     static private int countDies;
+    static private int Dimonds = 0;
+    public float vida = 100;
+    public Image barraVida;
 
     // Use this for initialization
     void Start () {
@@ -24,14 +28,26 @@ public class PlayerCollision : MonoBehaviour {
 
 
         dies.text = "You Die " + countDies + " times";
-		
-	}
+        gens.text = Dimonds.ToString();
+
+        if(vida <= 0)
+        {
+            Morreu();
+        }
+
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Stalack" || collision.transform.tag == "Walls" || collision.transform.tag == "Lava" || collision.transform.tag == "Thorns" || collision.transform.tag == "Fim")
+        if (collision.transform.tag == "Walls" || collision.transform.tag == "Lava" || collision.transform.tag == "Fim")
         {
             Morreu();
+        }
+
+        if (collision.transform.tag == "Stalack" || collision.transform.tag == "Thorns")
+        {
+            vida -= 50;
+            barraVida.fillAmount = (vida / 100);
         }
 
         if (collision.transform.tag == "Platforms")
@@ -57,11 +73,18 @@ public class PlayerCollision : MonoBehaviour {
             Morreu();
         }
 
+        if (other.transform.tag == "Diamond")
+        {
+            Dimonds++;
+            Destroy(other.gameObject);
+        }
+
     }
 
     void Morreu()
     {
         countDies++;
+        Dimonds = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

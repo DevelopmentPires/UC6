@@ -32,6 +32,8 @@ public class KeyController : MonoBehaviour {
             imgKeyBlue.SetActive(true);
         }
 
+
+
     }
 
 }
