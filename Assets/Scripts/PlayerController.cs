@@ -64,6 +64,13 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    public void Jump()
+    {
+        anim.SetTrigger("Pula");
+        jump = true;
+
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         

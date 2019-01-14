@@ -41,6 +41,7 @@ public class PlayerCollision : MonoBehaviour {
     {
         if (collision.transform.tag == "Walls" || collision.transform.tag == "Lava" || collision.transform.tag == "Fim")
         {
+            Handheld.Vibrate();
             Morreu();
         }
 
@@ -48,6 +49,7 @@ public class PlayerCollision : MonoBehaviour {
         {
             vida -= 50;
             barraVida.fillAmount = (vida / 100);
+            Handheld.Vibrate();
         }
 
         if (collision.transform.tag == "Platforms")
