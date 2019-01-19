@@ -15,16 +15,15 @@ public class PlayerCollision : MonoBehaviour {
     static private int Dimonds = 0;
     public float vida = 100;
     public Image barraVida;
-
+  
     // Use this for initialization
     void Start () {
 
         alien = GameObject.Find("Alien");
-       
-        	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update () {
 
 
         dies.text = "You Die " + countDies + " times";
@@ -57,12 +56,15 @@ public class PlayerCollision : MonoBehaviour {
             alien.transform.parent = collision.transform;
         }
 
-        
 
     }
 
+
+
+
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.transform.tag == "Key")
         {
             Destroy(other.gameObject);
@@ -81,6 +83,11 @@ public class PlayerCollision : MonoBehaviour {
             Destroy(other.gameObject);
         }
 
+        if (other.transform.tag == "EndGame")
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
     }
 
     void Morreu()
@@ -90,13 +97,5 @@ public class PlayerCollision : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-  
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.transform.tag == "Platforms")
-        {
-            alien.transform.parent = null;
-        }
 
-    }
 }

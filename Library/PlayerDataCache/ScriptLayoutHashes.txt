@@ -166,3 +166,4 @@ e8e413a0d6eedec3ad16ba0492d852ac Assembly-CSharp.dll:.PlatformDown
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CarregaMenu
 e0f114f2f14156401d16d6c811816bbb Assembly-CSharp.dll:.LeftJoystickPlayerController
 692bcf171767de3c6085da9b344d47fd Assembly-CSharp.dll:.ConfigSom
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Platforms

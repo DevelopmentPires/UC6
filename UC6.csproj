@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -295,6 +297,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\animaGem.cs" />
+    <Compile Include="Assets\loadGame.cs" />
+    <Compile Include="Assets\Platforms.cs" />
     <Compile Include="Assets\Scripts\ajusts\colisao.cs" />
     <Compile Include="Assets\Scripts\ajusts\final.cs" />
     <Compile Include="Assets\Scripts\ajusts\teste.cs" />
@@ -307,6 +311,7 @@
     <Compile Include="Assets\Scripts\LeftJoystick.cs" />
     <Compile Include="Assets\Scripts\LeftJoystickPlayerController.cs" />
     <Compile Include="Assets\Scripts\LeftJoystickTouchContoller.cs" />
+    <Compile Include="Assets\Scripts\list.cs" />
     <Compile Include="Assets\Scripts\MenuControle.cs" />
     <Compile Include="Assets\Scripts\MovePortao.cs" />
     <Compile Include="Assets\Scripts\PlatformDown.cs" />

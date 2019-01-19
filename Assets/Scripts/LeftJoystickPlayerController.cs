@@ -8,17 +8,17 @@ public class LeftJoystickPlayerController : MonoBehaviour
     public int rotationSpeed = 8; // rotation speed of the player character
     public Animator animator; // the animator controller of the player character
     private Vector3 leftJoystickInput; // holds the input of the Left Joystick
-    private Rigidbody rigidBody; // rigid body component of the player character
+    private CharacterController charControl; // rigid body component of the player character
 
     void Start()
     {
-        if (transform.GetComponent<Rigidbody>() == null)
+        if (transform.GetComponent<CharacterController>() == null)
         {
-            Debug.LogError("A RigidBody component is required on this game object.");
+            Debug.LogError("There is no a Character COntroller joinned with the Player!");
         }
         else
         {
-            rigidBody = transform.GetComponent<Rigidbody>();
+            charControl = transform.GetComponent<CharacterController>();
         }
 
         if (leftJoystick == null)
@@ -69,7 +69,8 @@ public class LeftJoystickPlayerController : MonoBehaviour
             Vector3 lookDirection = temp - transform.position;
             if (lookDirection != Vector3.zero)
             {
-                rotationTarget.localRotation = Quaternion.Slerp(rotationTarget.localRotation, Quaternion.LookRotation(lookDirection), rotationSpeed * Time.deltaTime);
+                //    rotationTarget.localRotation = Quaternion.Slerp(rotationTarget.localRotation, Quaternion.LookRotation(lookDirection), rotationSpeed * Time.deltaTime);
+               transform.Rotate(new Vector3(0, xMovementLeftJoystick * rotationSpeed * Time.deltaTime, 0));
             }
             if (animator != null)
             {
@@ -77,7 +78,8 @@ public class LeftJoystickPlayerController : MonoBehaviour
             }
 
             // move the player
-            rigidBody.transform.Translate(leftJoystickInput * Time.fixedDeltaTime);
+            Vector3 move = zMovementLeftJoystick * transform.TransformDirection(Vector3.forward) * moveSpeed;
+            charControl.Move(move * Time.fixedDeltaTime);
         }
     }
 }

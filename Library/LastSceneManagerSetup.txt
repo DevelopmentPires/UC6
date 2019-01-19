@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/aleat/Desktop/teste/Assets/Cenas/Jogo.unity
+- path: Assets/Cenas/Jogo.unity
   isLoaded: 1
   isActive: 1

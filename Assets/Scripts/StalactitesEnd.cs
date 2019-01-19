@@ -7,6 +7,7 @@ public class StalactitesEnd : MonoBehaviour {
     GameObject StalactitesGroup;
     GameObject SensorStalac;
     public static bool StalacActiveDois = false;
+    public GameObject groupStack;
 
     // Use this for initialization
     void Start () {
@@ -25,20 +26,25 @@ public class StalactitesEnd : MonoBehaviour {
         }
 
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        if (collision.transform.tag == "Player" && !StalacActiveDois)
+        if (other.transform.tag == "Player" && !StalacActiveDois)
         {
             StalacActiveDois = true;
             Destroy(SensorStalac);
 
         }
 
-        if (collision.transform.tag == "Scenario" || (collision.transform.tag == "Player" && StalacActiveDois))
+        if (other.transform.tag == "Scenario" || (other.transform.tag == "Player" && StalacActiveDois))
         {
             Destroy(gameObject);
             
+        }
+
+        if (StalacActiveDois && groupStack == null && other.transform.tag != "Player")
+        {
+            StalacActiveDois = !StalacActiveDois;
         }
 
 
